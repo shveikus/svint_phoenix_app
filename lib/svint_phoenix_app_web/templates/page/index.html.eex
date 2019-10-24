@@ -1,2 +1,3 @@
 <p><%= @time %></p>
 <p><%= @name %></p>
+<p><%= link("Users", to: Routes.user_path(@conn, :index)) %></p>

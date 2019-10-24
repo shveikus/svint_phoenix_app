@@ -15,8 +15,8 @@ defmodule SvintPhoenixAppWeb.Router do
 
   scope "/", SvintPhoenixAppWeb do
     pipe_through :browser
-
     get "/", PageController, :index
+    resources "/users", UserController
   end
 
   # Other scopes may use custom stacks.

@@ -14,5 +14,9 @@ defmodule SvintPhoenixApp.Accounts.User do
     user
     |> cast(attrs, [:email, :age])
     |> validate_required([:email, :age])
+    # |> validate_format(:email, ~r/^[A-Za-z0-9._%+-+']+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/)
+    # |> unique_constraint(:email)
   end
+
+
 end
