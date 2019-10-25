@@ -2,7 +2,7 @@ defmodule SvintPhoenixApp.Accounts do
   @moduledoc """
   The Accounts context.
   """
-
+require Logger
   import Ecto.Query, warn: false
   alias SvintPhoenixApp.Repo
 
@@ -50,6 +50,7 @@ defmodule SvintPhoenixApp.Accounts do
 
   """
   def create_user(attrs \\ %{}) do
+      Logger.warn("|Accounts CONTEXT|#{inspect attrs}")
     %User{}
     |> User.changeset(attrs)
     |> Repo.insert()

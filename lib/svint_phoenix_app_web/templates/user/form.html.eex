@@ -13,6 +13,10 @@
   <%= number_input f, :age %>
   <%= error_tag f, :age %>
 
+  <%= label f, :password %>
+  <%= password_input f, :password_digest %>
+  <%= error_tag f, :password_digest %>
+
   <div>
     <%= submit "Save" %>
   </div>

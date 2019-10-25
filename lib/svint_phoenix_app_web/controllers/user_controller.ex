@@ -19,7 +19,10 @@ defmodule SvintPhoenixAppWeb.UserController do
       {:ok, user} ->
         conn
         |> put_flash(:info, "User created successfully.")
-        |> redirect(to: Routes.user_path(conn, :show, user))
+        # |> redirect(to: Routes.user_path(conn, :show, user))
+        |> put_session(:current_user_id, user.id)
+        |> put_flash(:info, "Signed up successfully.")
+        |> redirect(to: Routes.page_path(conn, :index))
 
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)

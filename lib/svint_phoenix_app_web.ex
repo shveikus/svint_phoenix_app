@@ -24,6 +24,7 @@ defmodule SvintPhoenixAppWeb do
       import Plug.Conn
       import SvintPhoenixAppWeb.Gettext
       alias SvintPhoenixAppWeb.Router.Helpers, as: Routes
+      import SvintPhoenixAppWeb.Helpers.Auth, only: [signed_in?: 1]
     end
   end
 

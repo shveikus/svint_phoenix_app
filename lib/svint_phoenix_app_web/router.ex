@@ -16,11 +16,11 @@ defmodule SvintPhoenixAppWeb.Router do
   scope "/", SvintPhoenixAppWeb do
     pipe_through :browser
     get "/", PageController, :index
-    resources "/users", UserController
-  end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", SvintPhoenixAppWeb do
-  #   pipe_through :api
-  # end
+    resources "/users", UserController
+
+    get "/sign-in", SessionController, :new
+    post "/sign-in", SessionController, :create
+    delete "/sign-out", SessionController, :delete
+  end
 end
