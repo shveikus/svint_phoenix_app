@@ -4386,6 +4386,11 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
+node-bin-setup@^1.0.0:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/node-bin-setup/-/node-bin-setup-1.0.6.tgz#4b5c9bb937ece702d7069b36ca78af4684677528"
+  integrity sha512-uPIxXNis1CRbv1DwqAxkgBk5NFV3s7cMN/Gf556jSw6jBvV7ca4F9lRL/8cALcZecRibeqU+5dFYqFFmzv5a0Q==
+
 node-dir@0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/node-dir/-/node-dir-0.1.8.tgz#55fb8deb699070707fb67f91a460f0448294c77d"
@@ -4442,6 +4447,13 @@ node-releases@^1.1.38:
   integrity sha512-/5NZAaOyTj134Oy5Cp/J8mso8OD/D9CSuL+6TOXXsTKO8yjc5e4up75SRPCganCjwFKMj2jbp5tR0dViVdox7g==
   dependencies:
     semver "^6.3.0"
+
+node@8.10.0:
+  version "8.10.0"
+  resolved "https://registry.yarnpkg.com/node/-/node-8.10.0.tgz#0ec17a14acbd38ede97087eee9df4e40fa152b3f"
+  integrity sha512-SZQy6Z1cgvq5W8kpqSQw6uSzSdwKCMdo5q3ONtcEi8mjIaBujdiyG1l4EAEp1zmQ8qM6TTk/x2AYf9MtyigXWg==
+  dependencies:
+    node-bin-setup "^1.0.0"
 
 nomnom@^1.8.1:
   version "1.8.1"
