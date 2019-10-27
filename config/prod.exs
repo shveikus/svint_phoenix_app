@@ -11,7 +11,8 @@ use Mix.Config
 # before starting your production server.
 config :svint_phoenix_app, SvintPhoenixAppWeb.Endpoint,
   url: [scheme: "https", host: "svint-phoeinx", port: 443],
-force_ssl: [rewrite_on: [:x_forwarded_proto]],
+         force_ssl: [rewrite_on: [:x_forwarded_proto]
+       ],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production

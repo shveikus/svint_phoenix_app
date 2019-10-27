@@ -11,7 +11,7 @@ database_url =
     For example: ecto://USER:PASS@HOST/DATABASE
     """
 
-config :hello_world, HelloWorld.Repo,
+config :svint_phoenix_app, SvintPhoenixApp.Repo,
   ssl: true,
   url: database_url,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
@@ -23,7 +23,7 @@ secret_key_base =
     You can generate one by calling: mix phx.gen.secret
     """
 
-config :hello_world, HelloWorldWeb.Endpoint,
+config :svint_phoenix_app, SvintPhoenixApp.Endpoint,
   http: [:inet6, port: String.to_integer(System.get_env("PORT") || "4000")],
   secret_key_base: secret_key_base
 

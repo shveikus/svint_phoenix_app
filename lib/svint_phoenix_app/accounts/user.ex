@@ -14,8 +14,9 @@ defmodule SvintPhoenixApp.Accounts.User do
   def changeset(user, attrs) do
     user
     |> cast(attrs, [:email, :age, :password_digest])
-    |> validate_required([:email, :age, :password_digest], message: "Put something here, man")
+    |> validate_required([:email, :password_digest], message: "Put something here, man")
     |> validate_format(:email, ~r/^[A-Za-z0-9._%+-+']+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/)
+    |> validate_inclusion(:age, 18..121, message: "You should wait, while you will be 18")
     |> unique_constraint(:email)
     |> update_change(:password_digest, &Bcrypt.hash_pwd_salt/1)
   end
