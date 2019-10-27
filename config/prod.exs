@@ -10,10 +10,17 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :svint_phoenix_app, SvintPhoenixAppWeb.Endpoint,
-  url: [scheme: "https", host: "svint-phoeinx", port: 443],
+  url: [scheme: "https", host: "whispering-fjord-61300.herokuapp.com", port: 443],
          force_ssl: [rewrite_on: [:x_forwarded_proto]
-       ],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+        ],
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
+
+config :svint_phoenix_app, SvintPhoenixApp.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  ssl: true,
+  url: System.get_env("DATABASE_URL"),
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 
 # Do not print debug messages in production
 config :logger, level: :info
@@ -54,4 +61,4 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs which loads secrets
 # and configuration from environment variables.
-import_config "prod.secret.exs"
+# import_config "prod.secret.exs"
