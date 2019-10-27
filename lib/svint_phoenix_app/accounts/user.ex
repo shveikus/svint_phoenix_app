@@ -20,12 +20,4 @@ defmodule SvintPhoenixApp.Accounts.User do
     |> unique_constraint(:email)
     |> update_change(:password_digest, &Bcrypt.hash_pwd_salt/1)
   end
-
-  def get_by_username(username) when is_nil(username) do
-    nil
-  end
-
-  def get_by_username(username) do
-    Repo.get_by(User, username: username)
-  end
 end
