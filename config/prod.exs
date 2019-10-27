@@ -10,7 +10,8 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :svint_phoenix_app, SvintPhoenixAppWeb.Endpoint,
-  url: [scheme: "https", host: "whispering-fjord-61300.herokuapp.com", port: System.get_env("PORT")],
+  http: [port: System.get_env("PORT")],
+  url: [scheme: "https", host: "whispering-fjord-61300.herokuapp.com", port: 443],
          force_ssl: [rewrite_on: [:x_forwarded_proto]
         ],
   cache_static_manifest: "priv/static/cache_manifest.json",
