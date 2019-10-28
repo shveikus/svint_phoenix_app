@@ -7,6 +7,11 @@
 # General application configuration
 use Mix.Config
 
+config :svint_phoenix_app, :pow,
+  user: SvintPhoenixApp.Users.User,
+  repo: SvintPhoenixApp.Repo,
+  web_module: SvintPhoenixAppWeb
+
 config :svint_phoenix_app,
   ecto_repos: [SvintPhoenixApp.Repo]
 

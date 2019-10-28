@@ -1,5 +1,6 @@
 defmodule SvintPhoenixAppWeb.Router do
   use SvintPhoenixAppWeb, :router
+  use Pow.Phoenix.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,14 +14,19 @@ defmodule SvintPhoenixAppWeb.Router do
     plug :accepts, ["json"]
   end
 
+  pipeline :protected do
+    plug Pow.Plug.RequireAuthenticated,
+      error_handler: Pow.Phoenix.PlugErrorHandler
+  end
+
+  scope "/" do
+    pipe_through :browser
+
+    pow_routes()
+  end
+
   scope "/", SvintPhoenixAppWeb do
     pipe_through :browser
     get "/", PageController, :index
-
-    resources "/users", UserController
-
-    get "/sign-in", SessionController, :new
-    post "/sign-in", SessionController, :create
-    delete "/sign-out", SessionController, :delete
   end
 end
