@@ -19,6 +19,10 @@ defmodule SvintPhoenixAppWeb.Router do
       error_handler: Pow.Phoenix.PlugErrorHandler
   end
 
+  pipeline :admin do
+    plug SvintPhoenixAppWeb.EnsureRolePlug, :admin
+  end
+
   scope "/" do
     pipe_through :browser
 
@@ -28,6 +32,10 @@ defmodule SvintPhoenixAppWeb.Router do
   scope "/", SvintPhoenixAppWeb do
     pipe_through :browser
     get "/", PageController, :index
+  end
+
+  scope "/", SvintPhoenixAppWeb do
+    pipe_through [:browser, :admin]
     get "/contact", PageController, :contact
   end
 end

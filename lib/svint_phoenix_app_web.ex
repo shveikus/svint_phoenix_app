@@ -51,6 +51,8 @@ defmodule SvintPhoenixAppWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+      import SvintPhoenixAppWeb.EnsureRolePlug
+      alias SvintPhoenixAppWeb.Router.Helpers, as: Routes
     end
   end
 
