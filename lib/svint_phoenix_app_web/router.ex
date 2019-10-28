@@ -28,5 +28,6 @@ defmodule SvintPhoenixAppWeb.Router do
   scope "/", SvintPhoenixAppWeb do
     pipe_through :browser
     get "/", PageController, :index
+    get "/contact", PageController, :contact
   end
 end
