@@ -42,7 +42,6 @@ defmodule SvintPhoenixAppWeb do
       import SvintPhoenixAppWeb.ErrorHelpers
       import SvintPhoenixAppWeb.Gettext
       alias SvintPhoenixAppWeb.Router.Helpers, as: Routes
-      import SvintPhoenixAppWeb.Helpers.Auth
     end
   end
 
