@@ -4425,6 +4425,11 @@ node-libs-browser@^2.0.0:
     util "^0.11.0"
     vm-browserify "^1.0.1"
 
+node-linux-x64@^12.13.0:
+  version "12.13.0"
+  resolved "https://registry.yarnpkg.com/node-linux-x64/-/node-linux-x64-12.13.0.tgz#17235b88ff43ac7e7cf477ff45cca6b2cd7142d2"
+  integrity sha512-lvNcftnYx8bNDC44wUjAMuQJhNxYeCu9qlYeksFmY2+tvv1LgvwzHmLa7i9rUQi2d8H1Uz4F8rGoYck0bRKxBQ==
+
 node-pre-gyp@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.12.0.tgz#39ba4bb1439da030295f899e3b520b7785766149"
