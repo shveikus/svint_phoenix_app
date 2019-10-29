@@ -1,4 +1,2 @@
-<p><%= @time %></p>
 <p><%= @name %></p>
-<p><%= link("Users", to: "/") %></p>
 
