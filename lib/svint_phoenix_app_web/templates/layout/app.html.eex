@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
   <body>
-    <img src="images/back.jpg" id="bg" alt="">
     <main role="main" class="container">
           <%= render SvintPhoenixAppWeb.SharedView, "navbar.html", assigns %>
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
